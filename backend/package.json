@@ -1,0 +1,28 @@
+{
+  "name": "thought-catcher-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Express API Thought Catcher",
+  "type": "module",
+  "scripts": {
+  "dev": "tsx watch src/index.ts",
+  "typecheck": "tsc --noEmit",
+  "build": "tsc",
+  "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.5",
+    "@types/pg": "^8.23.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}

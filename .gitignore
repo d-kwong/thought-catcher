@@ -1,0 +1,16 @@
+# Installed dependencies
+node_modules/
+
+# Compiled JavaScript
+dist/
+
+# Local environment settings
+.env
+.env.*
+!.env.example
+
+# macOS metadata
+.DS_Store
+
+# Agent instructions
+AGENTS.md
