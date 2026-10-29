@@ -1,12 +1,12 @@
-import express from "express";
+import "dotenv/config";
+import { createApp } from "./app.js";
+import { pool } from "./db.js";
 
-const app = express();
-const port = 3000;
+const port = Number(process.env.PORT ?? "3000");
+if (!Number.isInteger(port) || port < 1 || port > 65535) {
+  throw new Error("PORT must be an integer between 1 and 65535");
+}
 
-app.get("/health", (_req, res) => {
-    res.json({ status: "ok "})
-});
-
-app.listen(port, () => {
-    console.log(`Thought Catcher API listening on http://localhost:${port}`);
+createApp(pool).listen(port, () => {
+  console.log(`Thought Catcher API listening on http://localhost:${port}`);
 });

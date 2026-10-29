@@ -5,15 +5,17 @@
   "description": "Express API Thought Catcher",
   "type": "module",
   "scripts": {
-  "dev": "tsx watch src/index.ts",
-  "typecheck": "tsc --noEmit",
-  "build": "tsc",
-  "start": "node dist/index.js"
+    "dev": "tsx watch src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "tsx --test tests/*.test.ts"
   },
   "dependencies": {
     "dotenv": "^18.0.8",
     "express": "^5.3.0",
-    "pg": "^8.23.1"
+    "pg": "^8.23.1",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
